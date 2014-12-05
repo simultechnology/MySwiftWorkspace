@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>266447A7-B3E5-4D27-B441-7CB7274CDA9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MySwiftWorkspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6231D48C5969E3E8268A7C221C57B96E38C179D2</key>
+		<string>https://github.com/simultechnology/MySwiftWorkspace.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MySwiftWorkspace.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6231D48C5969E3E8268A7C221C57B96E38C179D2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/simultechnology/MySwiftWorkspace.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6231D48C5969E3E8268A7C221C57B96E38C179D2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6231D48C5969E3E8268A7C221C57B96E38C179D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MySwiftWorkspace</string>
+		</dict>
+	</array>
+</dict>
+</plist>
