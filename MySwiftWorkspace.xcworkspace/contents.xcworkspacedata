@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AWrittenOracleApp/AWrittenOracleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AutoLayoutApp/AutoLayoutApp.xcodeproj">
    </FileRef>
    <FileRef
