@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myLable: UILabel!
+    @IBAction func changeLable(sender: AnyObject) {
+        myLable.text = "Hello World!!"
+    }
     @IBAction func unwindToTop(segue: UIStoryboardSegue) {
         
     }
