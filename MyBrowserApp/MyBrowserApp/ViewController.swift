@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var forwardButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let startUrl = "http://yahoo.co.jp"
+        if let url = NSURL(string: startUrl) {
+            let urlRequest = NSURLRequest(URL: url)
+            self.webView.loadRequest(urlRequest)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +29,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goBack(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func goForward(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func reload(sender: AnyObject) {
+        
+    }
 
 }
 

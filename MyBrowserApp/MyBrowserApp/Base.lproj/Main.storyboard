@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyBrowserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XMK-t7-akR">
+                                <rect key="frame" x="10" y="30" width="580" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pt-QA-gvY">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="23A-1q-Nul"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="←" id="Azs-I6-YF4">
+                                        <connections>
+                                            <action selector="goBack:" destination="BYZ-38-t0r" id="tlB-6e-pcT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="→" id="WIv-Ug-RiZ">
+                                        <connections>
+                                            <action selector="goForward:" destination="BYZ-38-t0r" id="nZ7-nW-0wu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vOE-PB-4lq"/>
+                                    <barButtonItem title="Item" systemItem="refresh" id="fPW-tt-VSU">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="ROC-ie-sLD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqA-wm-VhV">
+                                <rect key="frame" x="0.0" y="70" width="600" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PqA-wm-VhV" secondAttribute="trailing" id="6AD-mw-dIU"/>
+                            <constraint firstAttribute="trailing" secondItem="5pt-QA-gvY" secondAttribute="trailing" id="9rr-iy-0sG"/>
+                            <constraint firstItem="PqA-wm-VhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H3f-4O-Zoj"/>
+                            <constraint firstItem="5pt-QA-gvY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KUT-ri-9AZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5pt-QA-gvY" secondAttribute="bottom" id="O5w-Dd-O45"/>
+                            <constraint firstItem="5pt-QA-gvY" firstAttribute="top" secondItem="PqA-wm-VhV" secondAttribute="bottom" id="YHP-fR-STX"/>
+                            <constraint firstItem="XMK-t7-akR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="fYu-6Q-Mql"/>
+                            <constraint firstAttribute="trailing" secondItem="XMK-t7-akR" secondAttribute="trailing" constant="10" id="igH-Gt-mUH"/>
+                            <constraint firstItem="XMK-t7-akR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="l3c-y9-SIa"/>
+                            <constraint firstItem="PqA-wm-VhV" firstAttribute="top" secondItem="XMK-t7-akR" secondAttribute="bottom" constant="10" id="ohd-BI-P2w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Azs-I6-YF4" id="IkQ-AE-qEo"/>
+                        <outlet property="forwardButton" destination="WIv-Ug-RiZ" id="urq-Kp-l1V"/>
+                        <outlet property="textField" destination="XMK-t7-akR" id="OgC-PI-lED"/>
+                        <outlet property="webView" destination="PqA-wm-VhV" id="ARb-aX-4kv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
